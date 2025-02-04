@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+    margin: 0;
+    height: 100vh;
+    padding:0;
+    font-family: "Roboto", serif;
+    text-align: center;
+}
+h1{
+    margin: 0;
+    margin-top: 20px;
+    color: #333;
+    background: linear-gradient(135deg, #4CAF50, #2196F3);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.underline {
+    width: 471px;
+    height: 5px;
+    background: #4CAF50;
+    margin: auto;
+    border-radius: 10px;
+}
+.wrapper{
+    display: inline-flex;
+    position: relative;
+    top: 35px;
+}
+.wrapper .static-txt{
+    font-weight: 450;
+    background: linear-gradient(135deg, #1E90FF, #8A2BE2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .dynamic-txts{
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    height: 18px;
+    line-height: 18px;
+    overflow: hidden;
+}
+.wrapper .dynamic-txts li{
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 4s steps(2) infinite;
+}
+@keyframes slide {
+    100%{
+       top: -34.75px; 
+    }
+}
+.wrapper .dynamic-txts li span{
+    position: relative;
+    background: linear-gradient(135deg, #DC143C, #FF8C00); /* Red to Orange */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+.wrapper .dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    border-left: 2px solid black;
+    transition: all 1s ease;
+    animation: typing 2s steps(8) infinite ;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+.container{
+    height: 475px;
+    width: 350px;
+    border: 1px solid black;
+    position: relative;
+    top: 85.33px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #4b4453;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.container #display{
+    border: 1px solid red;
+    height: 17%;
+    width: 100%;
+    margin: 5px;
+    font-size: 30px;
+    text-align: center;
+}
+.container #blocks{
+    height: 362px;
+    width: 100%;
+    margin: 5px;
+    padding: 6.5px;
+    padding-left: 7.11px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container #blocks .button{
+    height: 60px;
+    border: 1px solid black;
+    width: 66px;
+    padding: 5.5px 8px;
+    margin: 7.5px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color:#b0a8b9;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.container #blocks .button:hover {
+    background-color: #9c92a3; /* Slightly darker shade */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+  }
+.container #blocks .button:active {
+    background-color: #8c8395; /* Even darker */
+    transform: scale(0.95);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.container #blocks #special{
+    background-color: #845ec2;
+    color: #fefedf;
+}
+.container #blocks #special:hover {
+    background-color: #754eb3;
+}
+.container #blocks #special:active {
+    background-color: #6540a3;
+}
+.container #blocks #equal{
+    background-color: #ff8066;
+    color: #fefedf;
+}
+.container #blocks #equal:hover{
+    background-color: #e76e58;
+}
+.container #blocks #equal:active{
+    background-color: #d65e49;
+}
